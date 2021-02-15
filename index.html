@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+
+    <h1>Cold Caller</h1>
+    <p>Welcome to a coldcall app! To complete the app, finish the functions in main.js</p>
+    <p>When the 'Get Next Up' button is hit:</p>
+    <ol>
+        <li>The next name on the list should appear in the span with id="next-fellow"</li>
+        <li>The first time the button is hit, the first name on the list should appear.</li>
+        <li>If we've exhausted the list, the span with id="next-fellow" should display 'Please Shuffle Class!'</li>
+    </ol>
+
+    <p>When the Shuffle Class button is hit:</p>
+    <ol>
+        <li>The order of names should be shuffled randomly</li>
+        <li>After hitting the Shuffle button, the 'Get Next Up' button should start at the beginning of the list of names.</li>
+    </ol>
+
+    <button id="shuffle-btn" onclick="shuffleClass()">Shuffle Class</button>
+    <button id="next-btn" onclick="getNextUp()">Get Next Up</button>
+
+    <h2>Next up: <span id="next-fellow"></span></h2>
+    
+    <h2>Class List</h2>
+    <ol id="fellow-list">
+        <li>Candy</li>
+        <li>Hafiz</li>
+        <li>Jordan</li>
+        <li>Cristobal</li>
+        <li>Tiffany</li>
+        <li>Cassidy</li>
+        <li>Grace</li>
+        <li>Ivan</li>
+        <li>Du Min</li>
+        <li>Teyanna</li>
+        <li>Angelina</li>
+        <li>Ray F.P.</li>
+        <li>Kathy</li>
+        <li>Jarrett</li>
+        <li>Jamee</li>
+        <li>Esay</li>
+        <li>Quisa</li>
+        <li>David</li>
+        <li>Hady</li>
+        <li>Daniel</li>
+        <li>Jon</li>
+        <li>Imran</li>
+        <li>Alex</li>
+        <li>Talia</li>
+        <li>Jenna</li>
+        <li>Tamzeed</li>
+        <li>Yesi</li>
+        <li>Geormary</li>
+        <li>Ray U.</li>
+        <li>Jasleen</li>
+        <li>Sarah</li>
+        <li>Damien</li>
+        <li>Kelvin</li>
+    </ul>  
+</body>
+</html>
