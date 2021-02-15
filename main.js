@@ -1,8 +1,15 @@
+let count = 0
+let names = []
+let namesPull = document.getElementById("fellow-list").children
+for (let i = 0; i < namesPull.length; i++){
+    names.push(namesPull[i].innerHTML)
+}
+
 /**
  * Takes in an array of names and shuffles the names.
  * You may use this function to help complete this activity.
  * 
- * @param {string[]} names - an array of fellow names
+ * @param {string[]} names - an array of fellow names 
  * @returns {string[]} - the shuffled array of fellow names
  */
 function shuffleNamesArray(names) {
@@ -35,8 +42,18 @@ function shuffleNamesArray(names) {
  * The first time this button is hit, it should display the first name on the list.
  * If the last person on the list has been picked, display the message 'Please Shuffle Class!'
  */
+
+
 function getNextUp() {
-    console.log('get next up was clicked!')
+    let result = document.getElementById("next-fellow")
+    
+    if (count > 32){
+        result.textContent = 'Please Shuffle Class!'
+    }else {
+        result.textContent = names[count]
+        count +=1
+    }
+
 }
 
 /**
@@ -48,4 +65,13 @@ function getNextUp() {
  */
 function shuffleClass() {
     console.log('shuffle class was clicked!')
+
+    count = 0
+    shuffleNamesArray(names)
+
+    for (let i = 0; i < names.length ; i++){
+        document.getElementById("fellow-list").children[i].textContent = names[i]
+    }
+
 }
+
